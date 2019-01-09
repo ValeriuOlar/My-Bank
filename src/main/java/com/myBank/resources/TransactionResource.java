@@ -31,7 +31,10 @@ public class TransactionResource {
     // Create a new instance of TransactionService
     private TransactionService transactionService = new TransactionService();
     
-   
+    // Type           : Sub-resource 
+    // Parent Resource: CustomerResource
+    // Function       : Create a lodgement(credit) to a specified account id based on
+    //                  transfer type [DEBIT, CREDIT, TRANSFER]
     @POST
     public Transaction processTransaction(@PathParam("accountID") int accId, Transaction t){
         System.out.println("Processing Transaction");

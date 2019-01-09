@@ -42,7 +42,7 @@ public class CustomerResource {
     
     // Retrieve customer by ID
     @GET
-    @Path("/{customerId}") //<---
+    @Path("/{customerId}")
     public Customer getCustomer(@PathParam("customerId") int id){
         System.out.println("Retrieving Customer " + String.valueOf(id));
         return customerService.getCustomer(id);
